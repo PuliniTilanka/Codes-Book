@@ -21,6 +21,6 @@ int square(int a)
 	}
 	else
 	{
-		return sum;
+		return 0;
 	}
 }
