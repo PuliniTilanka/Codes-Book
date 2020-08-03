@@ -20,38 +20,30 @@ void main()
 			min=x[i+1];
 		}
 	}
-	count =n;
 	while(min>0)
 	{
 		for(i=0;i<n;i++)
 		{
-			int value = x[i];
-			count=hcf(min,count,value);	
+			if(x[i]%min==0)
+			{
+				count++;
+			}
+		
 		}
-		if(count==0)
+		if(count==n)
 		{
-			printf("Highest Common Factor is %d",min);
-			return 0;
+			printf("The Highest Common Factor is %d",min);
+			break;
 		}
 		else
 		{
-			count = n;
-			min=min-1;
+			count =0 ;
+			min--;
 		}
 		
 	}
 	
 	
+	
 }
-int hcf(int min, int count,int value)
-{
-	if(value%min==0)
-	{
-		count = count-1;
-		return count;
-	}
-	else
-	{
-		return count;
-	}
-}
+
